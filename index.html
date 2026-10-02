@@ -131,8 +131,19 @@
       display: flex;
       flex-direction: column;
     }
+    .col:first-child {
+      order: 1;
+    }
+    .col:first-child .detail-block {
+      order: 1;
+    }
+    .col:first-child .detail-block:nth-child(1),
+    .col:first-child .detail-block:nth-child(2),
+    .col:first-child .detail-block:nth-child(3) {
+      order: 1;
+    }
     .col:first-child .detail-block:nth-child(n+4) {
-      order: 10;
+      order: 3;
     }
     .col:last-child {
       order: 2;
@@ -363,7 +374,7 @@
 
     <div class="detail-block">
       <h2>Location</h2>
-      <p><strong>Home of Dr. Mike and Jeannette Rolfsen</strong></p>
+      <p><strong>Home of Dr. Mike and Mrs. Jeannette Rolfsen</strong></p>
       <p><a href="https://maps.google.com/?q=3960+Floyd+Drive,+Baton+Rouge,+LA+70808" target="_blank" rel="noopener">3960 Floyd Drive, Baton Rouge, LA 70808</a></p>
     </div>
 
